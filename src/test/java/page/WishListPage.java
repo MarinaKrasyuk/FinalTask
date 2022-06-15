@@ -4,10 +4,7 @@ import org.bouncycastle.cms.PasswordRecipientId;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.Utils;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -26,17 +23,12 @@ public class WishListPage {
         this.wait = wait;
     }
     public boolean isWishListPresent() {
-
         return isVisible(table);
 
     }
     public ProductPage clickProductPage() {
-        clickProductButton();
-        return new ProductPage(driver,wait);
-    }
-
-    private void clickProductButton() {
         driver.findElement(product).click();
+        return new ProductPage(driver,wait);
     }
     public void createWishlist(){
         Date date = new Date();

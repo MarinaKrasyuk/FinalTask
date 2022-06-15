@@ -25,11 +25,6 @@ public class AccountPage {
 
     }
 
-    public WishListPage clickWishListPage() {
-        clickWishListButton();
-        return new WishListPage(driver, wait);
-    }
-
     public DressesPage clickDressesPage() {
         clickDressTab();
         return new DressesPage(driver, wait);
@@ -39,7 +34,8 @@ public class AccountPage {
         driver.findElement(dressTab).click();
     }
 
-    private void clickWishListButton() {
+    public WishListPage clickWishListPage() {
         driver.findElement(wishlistButton).click();
+        return new WishListPage(driver, wait);
     }
 }

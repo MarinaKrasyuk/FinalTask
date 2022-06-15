@@ -1,6 +1,6 @@
 package mail_page;
 
-import data.JsonParserClass;
+import data.UserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,22 +26,18 @@ public class AccountCreationPage {
     }
 
     public AccountPage clickRegistrationPage() {
-        clickRegistrationButton();
-        return new AccountPage(driver, wait);
-    }
-
-    private void clickRegistrationButton() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstName));
-        driver.findElement(firstName).sendKeys(JsonParserClass.firstName);
-        driver.findElement(lastName).sendKeys(JsonParserClass.lastName);
-        driver.findElement(password).sendKeys(JsonParserClass.password);
-        driver.findElement(address).sendKeys(JsonParserClass.address);
-        driver.findElement(mobilePhone).sendKeys(JsonParserClass.mobilePhone);
-        driver.findElement(state).sendKeys(JsonParserClass.state);
-        driver.findElement(zip).sendKeys(JsonParserClass.zip);
-        driver.findElement(city).sendKeys(JsonParserClass.city);
+        driver.findElement(firstName).sendKeys(UserData.getFirstName());
+        driver.findElement(lastName).sendKeys(UserData.getLastName());
+        driver.findElement(password).sendKeys(UserData.getPassword());
+        driver.findElement(address).sendKeys(UserData.getAddress());
+        driver.findElement(mobilePhone).sendKeys(UserData.getMobilePhone());
+        driver.findElement(state).sendKeys(UserData.getState());
+        driver.findElement(zip).sendKeys(UserData.getZip());
+        driver.findElement(city).sendKeys(UserData.getCity());
 
         driver.findElement(registerButton).click();
+        return new AccountPage(driver, wait);
 
     }
 

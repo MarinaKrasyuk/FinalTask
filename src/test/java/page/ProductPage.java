@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.text.DecimalFormat;
 
 public class ProductPage {
     private static WebDriver driver;
@@ -48,22 +47,14 @@ public class ProductPage {
 
     }
 
-    public AccountPage clickAccountPage() {
-        clickAccountButton();
-        return new AccountPage(driver, wait);
-    }
-
     public DressesPage clickDressesPage() {
-        clickDressTab();
+        driver.findElement(dressTab).click();
         return new DressesPage(driver, wait);
     }
 
-    private void clickDressTab() {
-        driver.findElement(dressTab).click();
-    }
-
-    public void clickAccountButton() {
+    public AccountPage clickAccountPage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(accountButton));
         driver.findElement(accountButton).click();
+        return new AccountPage(driver, wait);
     }
 }

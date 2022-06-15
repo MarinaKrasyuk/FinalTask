@@ -1,16 +1,17 @@
-package data;
+package strategy;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import strategy.EnvironmentStrategy;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ChromeEnvClass implements EnvironmentStrategy{
+public class ChromeEnvClass implements EnvironmentStrategy {
     WebDriver driver;
 
     public ChromeEnvClass(WebDriver driver) {

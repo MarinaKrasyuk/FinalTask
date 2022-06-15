@@ -1,7 +1,11 @@
-package data;
+package driver;
 
 import constant.ConstantEnv;
 import org.openqa.selenium.WebDriver;
+import strategy.ChromeEnvClass;
+import strategy.EnvironmentStrategy;
+import strategy.FirefoxEnvClass;
+
 import java.net.MalformedURLException;
 
 public class Driver {

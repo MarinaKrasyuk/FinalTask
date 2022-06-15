@@ -1,4 +1,4 @@
-package data;
+package strategy;
 import org.openqa.selenium.WebDriver;
 import java.net.MalformedURLException;
 

@@ -1,13 +1,11 @@
 package test;
 
 import constant.ConstantURL;
-import data.Driver;
+import driver.Driver;
 import mail_page.AccountPage;
 import mail_page.StartPage;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

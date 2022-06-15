@@ -3,8 +3,9 @@ package test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import utils.AddWishListStrategy;
-import utils.AutoCreatedWishlist;
+import strategy.AddWishListStrategy;
+import strategy.AutoCreatedWishlist;
+
 
 public class AutoCreatedWishlistTest extends BaseTest {
     @Test
