@@ -1,0 +1,13 @@
+[
+  {
+    "first name":"Irina",
+    "last name": "Ivanova",
+    "email":"rocket_21@mail.ru",
+    "password": "MultiTeams!",
+    "address": "Test street,P.O.Box,Test",
+    "mobile phone" : "7387847208",
+    "zip": "82736",
+    "state": "Hawaii",
+    "city": "Hawaii"
+  }
+]
