@@ -1,5 +1,9 @@
 package test;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import mail_page.AccountPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,6 +19,8 @@ public class AddToCartTest extends BaseTest {
     private static DecimalFormat df2 = new DecimalFormat("#.00");
 
     @Test
+    @Description("Cart's test")
+    @Severity(SeverityLevel.CRITICAL)
     public void addToCartTest() {
         AccountPage accountPage = login();
         ProductPage productPage = null;
